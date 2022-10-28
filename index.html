@@ -7,8 +7,8 @@
     <script src="//digitalfortress.tech/js/top-15-commonly-used-regex/"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon">
 
     <style>
         body {
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <fieldset>
+            <div class="container" style="padding: 2rem 6px;">
                 <label>Avalie os seguintes pontos da live (1-5)</label> <br>
                 <div>
                     <label for="range1">Qualidade visual</label>
@@ -99,9 +99,9 @@
                         onchange="document.getElementById('out5') .value=value">
                     <output id="out5" name="out" for="range5"> </output>
                 </div>
-            </fieldset>
+            </div>
 
-            <fieldset>
+            <div class="container" style="padding: 2rem 6px;">
                 <label>Na sua experiência de espectador marque o que for verdadeiro para você:</label><br>
                 <div>
                     <label><input type="checkbox" name="Jogos de meu interesse" value="0" id="check1"> O canal traz
@@ -119,13 +119,13 @@
                 <label><input type="checkbox" name="Gosto da Jogabilidade" value="2" id="check4"> Gosto da
                     jogabilidade da(o)
                     streamer</label>
-            </fieldset>
+            </div>
 
-            <fieldset>
-                <label>Deixe aqui uma sugestão de algo que você gostaria de ver por aqui:
-                    <textarea name="sugestão" id="sugestao" rows="2" cols="30" placeholder="Sugestões..."></textarea>
-                </label>
-            </fieldset>
+            <div class="container" style="padding: 2rem 6px;">
+                <label>Deixe aqui uma sugestão de algo que você gostaria de ver por aqui:</label>
+                    <br><textarea name="sugestão" id="sugestao" rows="2" cols="30" placeholder="Sugestões..."></textarea>
+                
+            </div>
 
             <fieldset>
                 <input id="submit" type="submit" onclick="cadastraProduto()" value="Enviar">
