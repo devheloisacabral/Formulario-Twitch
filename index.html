@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulário TrainbyUNIFAA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="//digitalfortress.tech/js/top-15-commonly-used-regex/"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
+    <style>
+        body {
+            background: #fff url(img/fundo.jpg) center bottom/cover no-repeat content-box fixed;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+
+    <form id="survey-form" action="https://api.sheetmonkey.io/form/fpdzCwr2K93zMfcuh5a9N2" method="post">
+        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+        <h1 id="title">Formulário de Pesquisa Lives TrainStation</h1>
+        <p id="description">Nos ajude a melhorar sua experiência como espectador respondendo essa
+            pesquisa</p>
+        <fieldset>
+
+            <h3>Dados do usuário</h3>
+            <div class="box">
+                <label id="name-label">Nome: <input id="name" type="text" placeholder="Nome e sobrenome" name="nome"
+                        style="color: black;" required></input></label>
+            </div>
+            <div class="box">
+                <label id="email-label">Email: <input id="email" type="email" placeholder="code@email.com" name="email"
+                        style="color: black;" required
+                        pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$"></input></label>
+            </div>
+            <div class="box">
+                <label id="number-label">Idade: <input id="number" type="number" name="idade" min="18" max="120"
+                        style="color: black;" placeholder="18 - 120" required></input></label>
+            </div>
+            <div class="box">
+                <label id="sexo">Sexo:<required>
+                        <select name="" id="drop" name="sexo" style="background-color: rgba(255, 255, 255, 0.753);">
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                        </select>
+            </div>
+            </label>
+
+            <div class="container" style="padding: 2rem 6px;">
+                <div class="box">
+                    <label>Com qual frequencia você acompanha as lives da TrainStation?</label><br>
+                    <select id="select" name="select" style="background-color: rgba(255, 255, 255, 0.753);"
+                        class="select">
+                        <option value="Primeira vez que estou assistindo" selected>Primeira vez que estou assistindo
+                        </option>
+                        <option value="Sempre que tem live">Sempre que tem live</option>
+                        <option value="Uma vez na semana">Uma vez na semana</option>
+                        <option value="Algumas vezes num intervalo mensal">Algumas vezes num intervalo mensal
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <fieldset>
+                <label>Avalie os seguintes pontos da live (1-5)</label> <br>
+                <div>
+                    <label for="range1">Qualidade visual</label>
+                    <input type="range" name="Qualidade visual" id="range1" min="1" max="5" value="3"
+                        onchange="document.getElementById('out1') .value=value">
+                    <output id="out1" name="out" for="range1"> </output>
+                </div><br>
+                <div>
+                    <label for="range2">Qualidade sonora</label>
+                    <input type="range" name="Qualidade sonora" id="range2" min="1" max="5" value="3"
+                        onchange="document.getElementById('out2') .value=value">
+                    <output id="out2" name="out" for="range2"> </output>
+                </div><br>
+                <div>
+                    <label for="range3">Qualidade de transmissão (internet estável)</label>
+                    <input type="range" name="Qualidade de transmissao" id="range3" min="1" max="5" value="3"
+                        onchange="document.getElementById('out3') .value=value">
+                    <output id="out3" name="out" for="range3"> </output>
+                </div><br>
+                <div>
+                    <label for="range4">Iluminação do video/cenário</label>
+                    <input type="range" name="Iluminação do video" id="range4" min="1" max="5"
+                        onchange="document.getElementById('out4') .value=value">
+                    <output id="out4" name="out" for="range4"> </output>
+                </div><br>
+                <div>
+                    <label for="range5">Interação streamer e público</label>
+                    <input type="range" name="Interação streamer e público" id="range5" min="1" max="5"
+                        onchange="document.getElementById('out5') .value=value">
+                    <output id="out5" name="out" for="range5"> </output>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label>Na sua experiência de espectador marque o que for verdadeiro para você:</label><br>
+                <div>
+                    <label><input type="checkbox" name="Jogos de meu interesse" value="0" id="check1"> O canal traz
+                        jogos de meu
+                        interesse</label>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="As lives são divertidas" value="1" id="check2"> As lives são
+                        divertidas e prendem
+                        minha atenção</label>
+                </div>
+                <label><input type="checkbox" name="Os horários das lives sao bons" value="2" id="check3"> Os
+                    horários das lives correspondem ao
+                    meu tempo livre</label>
+                <label><input type="checkbox" name="Gosto da Jogabilidade" value="2" id="check4"> Gosto da
+                    jogabilidade da(o)
+                    streamer</label>
+            </fieldset>
+
+            <fieldset>
+                <label>Deixe aqui uma sugestão de algo que você gostaria de ver por aqui:
+                    <textarea name="sugestão" id="sugestao" rows="2" cols="30" placeholder="Sugestões..."></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <input id="submit" type="submit" onclick="cadastraProduto()" value="Enviar">
+            </fieldset>
+
+    </form>
+
+</body>
+
+</html>
